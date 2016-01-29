@@ -1,0 +1,17 @@
+[user]
+	name = Harrison Touw
+	email = hktouw@gmail.com
+[alias]
+	co = checkout
+  ci = commit
+  s = status
+  sla = log --oneline --decorate --graph --all
+  ls = "!f() { git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=local $1; }; f"
+[core]
+	safecrlf = warn
+	autocrlf = input
+	editor = vim
+[merge]
+	tool = vimdiff
+[push]
+        default = tracking
