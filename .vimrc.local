@@ -1,0 +1,131 @@
+set background=dark
+colorscheme twilightsub
+highlight Normal ctermbg=black
+
+set textwidth=120
+
+" bind \ (backward slash) to grep shortcut
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+" hotkey grep to search for word in directory 
+" split screen (tmux?)
+" directory
+"
+"
+"
+" Navigate Split Screen Vim
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Resizing Split Screen
+nnoremap <C-Left> :5winc > <CR>
+nnoremap <C-Right> :5winc < <CR>
+nnoremap <C-Up> :5winc + <CR>
+nnoremap <C-Down> :5winc - <CR>
+
+" Swap Screens
+nnoremap <C-E> <C-W>R
+
+" Break out of current Window
+" nnoremap <C-R> <C-W>T
+
+"remap ; to :
+"nnoremap ; :
+
+" Remap grep k to grep
+noremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" bind \ to grep 
+" command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap \ :Ag<SPACE>
+
+" Default to filename search for ctrlp
+let g:ctrlp_by_filename = 1
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" Remap jumping to next hunk
+nmap [h <Plug>GitGutterPrevHunk
+nmap ]h <Plug>GitGutterNextHunk
+
+" convert slashes to backslashes for Windows.
+if has('win32')
+  nmap ,cs :let @*=substitute(expand("%"), "/", "\\", "g")<CR>
+  nmap ,cl :let @*=substitute(expand("%:p"), "/", "\\", "g")<CR>
+
+" This will copy the path in 8.3 short format, for DOS and Windows 9x
+  nmap ,c8 :let @*=substitute(expand("%:p:8"), "/", "\\", "g")<CR>
+else
+  nmap ,cs :let @*=expand("%")<CR>
+  nmap ,cl :let @*=expand("%:p")<CR>
+endif
+
+" Move to the end of what you copied and pasted
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+" …also, Insert Mode as bpry<space>
+iabbr bpry require'pry';binding.pry
+
+" Add the pry debug line with \bp (or <Space>bp, if you did: map <Space> <Leader> )
+map <Leader>ri irequire'pry';binding.pry;<esc>:w<cr>
+map <Leader>ro orequire'pry';binding.pry;<esc>:w<cr>
+map <Leader>rb o<%require'pry';binding.pry;%><esc>:w<cr>
+
+" Alias for one-handed operation:
+map <Leader><Leader>p <Leader>bp
+
+" don't draw everything
+set lazyredraw
+
+" highlight cursor
+set cursorline
+
+" Free up C-n 
+ let g:NumberToggleTrigger="<Leader>b"
+
+
+" map bnext and bprevious. go between buffers
+nnoremap <Leader>n :bnext<CR>
+nnoremap <Leader>p :bprevious<CR>
+
+" remap c-w to c-i because osx uses ctrl w for something I think
+inoremap <C-i> <C-w>
+
+" highlight all occurances of word when search
+set hlsearch
+
+
+nnoremap <Leader>- :vertical resize +5<CR>
+nnoremap <Leader>= :vertical resize -5<CR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
