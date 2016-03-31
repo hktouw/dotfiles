@@ -82,9 +82,10 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias say='say -v kyoko'
-alias repos='cd /Users/harrisontouw/Repos'
-alias notes='cd /Users/harrisontouw/Repos/notes'
-alias haskell='cd /Users/harrisontouw/Repos/haskell'
+alias repos='cd /Users/hktouw/Repos'
+alias notes='cd /Users/hktouw/Repos/notes'
+alias gnotes='cd /Users/hktouw/Repos/notes/github'
+alias haskell='cd /Users/hktouw/Repos/haskell'
 
 alias ctags="`brew --prefix`/bin/ctags"
 
@@ -120,3 +121,9 @@ jqueryuidoc() { open dash://jqueryui:"$1"; }
 cssdoc() { open dash://css:"$1"; }
 javascriptdoc() { open dash://javascript:"$1"; }
 
+
+# Setting ag as the default source for fzf
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

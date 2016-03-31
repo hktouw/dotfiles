@@ -112,23 +112,39 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
 
-
 "No end of line
 " set binary
 " set noeol
 let g:PreserveNoEOL = 1
 
+" remap - to explore
+nnoremap - :Explore<CR>
 
+" fzf
+set rtp+=~/.fzf
 
+" s is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
+" Default fzf layout
+" - down / up / left / right
+" - window (nvim only)
+let g:fzf_layout = { 'down': '~40%' }
 
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
 
+" [[B]Commits] to customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
+" Advanced customization using autoload functions
+autocmd VimEnter * command! Colors
+  \ call fzf#vim#colors({'left': '15%', 'options': '--reverse --margin 30%,0'})
 
-
-
-
-
+nnoremap <C-P> :FZF<CR>
 
 
 
