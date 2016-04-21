@@ -2,7 +2,7 @@ set background=dark
 colorscheme twilightsub
 highlight Normal ctermbg=black
 
-set textwidth=120
+set textwidth=80
 
 " bind \ (backward slash) to grep shortcut
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
@@ -35,7 +35,7 @@ nnoremap <C-E> <C-W>R
 "nnoremap ; :
 
 " Remap grep k to grep
-noremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+noremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>:resize +15<CR>
 
 " bind \ to grep 
 " command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!

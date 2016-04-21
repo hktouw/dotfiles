@@ -85,7 +85,10 @@ alias say='say -v kyoko'
 alias repos='cd /Users/hktouw/Repos'
 alias notes='cd /Users/hktouw/Repos/notes'
 alias gnotes='cd /Users/hktouw/Repos/notes/github'
+alias gsnotes='cd /Users/hktouw/Repos/notes/greatschools'
 alias haskell='cd /Users/hktouw/Repos/haskell'
+alias gg='cd /Users/hktouw/github/github'
+alias ge='cd /Users/hktouw/github/enterprise2'
 
 alias ctags="`brew --prefix`/bin/ctags"
 
@@ -127,3 +130,5 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+alias ghgo='git config --get remote.origin.url | ruby -ne "puts %{https://github.com/#{\$_.split(/.com[\:\/]/)[-1].gsub(%{.git},%{})}}" | xargs open'
