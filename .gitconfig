@@ -24,8 +24,8 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-[merge]
-  ff = only
+# [merge]
+#   ff = only
 [commit]
   template = ~/.gitmessage
 [fetch]
@@ -38,3 +38,9 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+[credential]
+	helper = osxkeychain
+[user]
+	name = Harrison Touw
+	email = hktouw@gmail.com

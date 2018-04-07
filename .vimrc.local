@@ -1,3 +1,5 @@
+set clipboard=unnamed
+
 set background=dark
 colorscheme twilightsub
 highlight Normal ctermbg=black
@@ -160,3 +162,18 @@ vnoremap <c-]> :CtrlPtjumpVisual<cr>
 
 inoremap <C> <Esc>
 
+" open grep/ag selections in a new tab
+nmap <C-V> :set switchbuf=vsplit<CR><CR>
+nmap <C-T> :set switchbuf=newtab<CR><CR>
+
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_github=1
+
+
+" Curled source, untarred, and symlinked into this directory
+" curl -OL https://github.com/elixir-lang/elixir/archive/v1.6.0.tar.gz
+" tar -xzf v1.6.0.tar.gz
+" ln -s elixir-1.6.0 elixir
+" repeat for otp
+let g:alchemist#elixir_erlang_src = "/usr/local/share/src"

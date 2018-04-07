@@ -86,9 +86,15 @@ alias repos='cd /Users/hktouw/Repos'
 alias notes='cd /Users/hktouw/Repos/notes'
 alias gnotes='cd /Users/hktouw/Repos/notes/github'
 alias gsnotes='cd /Users/hktouw/Repos/notes/greatschools'
+alias s228='cd /Users/hktouw/Repos/cs228'
 alias haskell='cd /Users/hktouw/Repos/haskell'
 alias gg='cd /Users/hktouw/github/github'
+alias gs='cd /Users/hktouw/github/spamurai'
+alias gsh='cd /Users/hktouw/github/spamuraigh'
+alias fe='cd /Users/hktouw/github/flink-experiments'
 alias ge='cd /Users/hktouw/github/enterprise2'
+alias gh-presto="presto --server presto-coordinator.service.github.net:8080"
+alias gh-presto-export="gh-presto --output-format CSV_HEADER -f"
 
 alias ctags="`brew --prefix`/bin/ctags"
 
@@ -132,3 +138,18 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 alias ghgo='git config --get remote.origin.url | ruby -ne "puts %{https://github.com/#{\$_.split(/.com[\:\/]/)[-1].gsub(%{.git},%{})}}" | xargs open'
+
+# to fix sed: RE error: illegal byte sequence
+# export LC_CTYPE=C
+# export LANG=C
+#
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
+
+export EDITOR=/usr/local/bin/vim
+
+# added by Anaconda3 4.2.0 installer
+# export PATH="//anaconda/bin:$PATH"
+
+# persist history for iex repl
+export ERL_AFLAGS="-kernel shell_history enabled"
