@@ -83,9 +83,9 @@ alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias say='say -v kyoko'
 alias repos='cd /Users/hktouw/Repos'
-alias notes='cd /Users/hktouw/Repos/notes'
-alias gnotes='cd /Users/hktouw/Repos/notes/github'
-alias gsnotes='cd /Users/hktouw/Repos/notes/greatschools'
+alias notes='cd /Users/hktouw/Dropbox/notes'
+alias gnotes='cd /Users/hktouw/Dropbox/notes/github'
+alias gsnotes='cd /Users/hktouw/Dropbox/notes/greatschools'
 alias s228='cd /Users/hktouw/Repos/cs228'
 alias haskell='cd /Users/hktouw/Repos/haskell'
 alias gg='cd /Users/hktouw/github/github'
@@ -131,11 +131,14 @@ cssdoc() { open dash://css:"$1"; }
 javascriptdoc() { open dash://javascript:"$1"; }
 
 
+export FZF_DEFAULT_COMMAND='fd --type f'
+
 # Setting ag as the default source for fzf
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # To apply the command to CTRL-T as well
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_COMMAND="fd --type f"
 
 alias ghgo='git config --get remote.origin.url | ruby -ne "puts %{https://github.com/#{\$_.split(/.com[\:\/]/)[-1].gsub(%{.git},%{})}}" | xargs open'
 
