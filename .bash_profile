@@ -91,6 +91,7 @@ alias haskell='cd /Users/hktouw/Repos/haskell'
 alias gg='cd /Users/hktouw/github/github'
 alias gs='cd /Users/hktouw/github/spamurai'
 alias gsh='cd /Users/hktouw/github/spamuraigh'
+alias ham='cd /Users/hktouw/github/hamzo'
 alias fe='cd /Users/hktouw/github/flink-experiments'
 alias ge='cd /Users/hktouw/github/enterprise2'
 alias gh-presto="presto --server presto-coordinator.service.github.net:8080"
