@@ -156,3 +156,7 @@ export EDITOR=/usr/local/bin/vim
 
 # persist history for iex repl
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
