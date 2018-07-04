@@ -23,3 +23,5 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'tpope/vim-rhubarb'
+Plugin 'w0rp/ale'
+Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
