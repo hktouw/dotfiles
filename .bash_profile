@@ -92,6 +92,7 @@ alias gg='cd /Users/hktouw/github/github'
 alias gs='cd /Users/hktouw/github/spamurai'
 alias gsh='cd /Users/hktouw/github/spamuraigh'
 alias ham='cd /Users/hktouw/github/hamzo'
+alias olg='cd /Users/hktouw/go/src/github.com/github/octocaptcha-logger'
 alias fe='cd /Users/hktouw/github/flink-experiments'
 alias ge='cd /Users/hktouw/github/enterprise2'
 alias gh-presto="presto --server presto-coordinator.service.github.net:8080"
@@ -161,3 +162,5 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
+export GOPATH="/Users/hktouw/go"
+export PATH=$PATH:$GOPATH/bin
