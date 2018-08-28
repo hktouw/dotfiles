@@ -165,4 +165,5 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH="/Users/hktouw/go"
 export PATH=$PATH:$GOPATH/bin
 
+# get mysql working
 export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
