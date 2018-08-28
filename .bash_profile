@@ -97,8 +97,7 @@ alias fe='cd /Users/hktouw/github/flink-experiments'
 alias ge='cd /Users/hktouw/github/enterprise2'
 alias gh-presto="presto --server presto-coordinator.service.github.net:8080"
 alias gh-presto-export="gh-presto --output-format CSV_HEADER -f"
-alias gop='cd /Users/hktouw/Dropbox/notes/github/go-playground && cp template.go `date +%s`.go && vim `date +%s`.go'
-
+alias gop='cd /Users/hktouw/Dropbox/notes/github/go-playground && mkdir `date +%s` && cd `date +%s` && cp ../template.go main.go && echo `pwd` | pbcopy && vim main.go'
 alias ctags="`brew --prefix`/bin/ctags"
 
 
