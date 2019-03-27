@@ -93,6 +93,7 @@ alias gs='cd /Users/hktouw/github/spamurai'
 alias gsh='cd /Users/hktouw/github/spamuraigh'
 alias ham='cd /Users/hktouw/github/hamzo'
 alias he='cd /Users/hktouw/github/hydro-events'
+alias hs='cd /Users/hktouw/github/hydro-schemas'
 alias olg='cd /Users/hktouw/go/src/github.com/github/octocaptcha-logger'
 alias fe='cd /Users/hktouw/github/flink-experiments'
 alias ge='cd /Users/hktouw/github/enterprise2'
@@ -168,3 +169,6 @@ export PATH=$PATH:$GOPATH/bin
 
 # get mysql working
 export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
+
+nvm use --delete-prefix v10.2.1
+eval "$(pyenv init -)"
