@@ -170,5 +170,5 @@ export PATH=$PATH:$GOPATH/bin
 # get mysql working
 export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
 
-nvm use --delete-prefix v10.2.1
+nvm use --delete-prefix v11.14.0
 eval "$(pyenv init -)"
