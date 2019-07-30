@@ -53,11 +53,10 @@ setw -g pane-base-index 1
 # ----------------------
 
 # colorize messages in the command line
-set-option -g message-bg black #base02
-set-option -g message-fg brightred #orange
+set-option -g message-style bg=black,fg=brightred
 
 # no active pane highlighting
-set-option -g pane-active-border-fg default
+set-option -g pane-active-border-style fg=default
 
 # ----------------------
 # Status Bar
@@ -72,16 +71,11 @@ set-option -g status-position top    # position the status bar at top of screen
 setw -g monitor-activity on
 
 # set color for status bar
-set-option -g status-bg default
-set-option -g status-fg default
-set-option -g status-attr dim
 
-set -g status-bg '#000000'
+set -g status-style bg=default,fg=default,dim,bg='#000000'
 
 # set window list color for active window
-set-window-option -g window-status-current-fg colour69 #orange
-set-window-option -g window-status-current-bg default
-set-window-option -g window-status-current-attr bright
+set-window-option -g window-status-current-style fg=colour69,bg=default,bright
 
 # remove left side of status bar
 set -g status-left-length 100
