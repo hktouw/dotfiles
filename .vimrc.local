@@ -181,7 +181,8 @@ let g:alchemist#elixir_erlang_src = "/usr/local/share/src"
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'tslint'],
-\   'vue': ['eslint']
+\   'vue': ['eslint'],
+\   'go': ['golangci-lint']
 \ }
 "
 " let g:ale_fixers = {
