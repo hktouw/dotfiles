@@ -25,3 +25,4 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'w0rp/ale'
 Plugin 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plugin 'AndrewRadev/splitjoin.vim'
