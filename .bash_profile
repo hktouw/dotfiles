@@ -102,6 +102,7 @@ alias gh-presto="presto --server presto-coordinator.service.github.net:8080"
 alias gh-presto-export="gh-presto --output-format CSV_HEADER -f"
 alias gop='cd /Users/hktouw/Dropbox/notes/github/go-playground && mkdir `date +%s` && cd `date +%s` && cp ../template.go main.go && echo `pwd` | pbcopy && vim main.go'
 alias ctags="`brew --prefix`/bin/ctags"
+alias issue-update='/Users/hktouw/Dropbox/notes/github/go-playground/1573067691/issue-script'
 
 
 alias ls='ls -G'                  # remap ls with colors
