@@ -245,3 +245,7 @@ autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 " let g:go_auto_type_info = 1
 let g:go_guru_scope = ["..."]
+
+function! IssueUpdate()
+  execute '!/Users/hktouw/Dropbox/notes/github/go-playground/1573067691/issue-script' expand("%:t")
+endfunction
