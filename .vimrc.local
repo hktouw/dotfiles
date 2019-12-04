@@ -51,8 +51,8 @@ nnoremap j gj
 nnoremap k gk
 
 " Remap jumping to next hunk
-nmap [h <Plug>GitGutterPrevHunk
-nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>(GitGutterPrevHunk)
+nmap ]h <Plug>(GitGutterNextHunk)
 
 " convert slashes to backslashes for Windows.
 if has('win32')
