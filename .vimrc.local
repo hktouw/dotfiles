@@ -245,7 +245,12 @@ autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 " let g:go_auto_type_info = 1
 let g:go_guru_scope = ["..."]
+" Use gopls for rename
+let g:go_rename_command = 'gopls'
 
-function! IssueUpdate()
-  execute '!/Users/hktouw/Dropbox/notes/github/go-playground/1573067691/issue-script' expand("%:t")
+" function! IssueUpdate()
+"   execute '!/Users/hktouw/Dropbox/notes/github/go-playground/1573067691/issue-script' expand("%:t")
+" endfunction
+function! IssueCommentUpdate()
+  execute '!/Users/hktouw/Dropbox/notes/github/go-playground/1589217078/issue-comment-script' expand("%:t")
 endfunction
