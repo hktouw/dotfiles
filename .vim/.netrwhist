@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/hktouw/Repos/dotfiles'
+let g:netrw_dirhist_6='/Users/hktouw'
+let g:netrw_dirhist_5='/Users/hktouw/github/airflow-sources/plugins'
+let g:netrw_dirhist_4='/Users/hktouw/github/airflow-sources'
+let g:netrw_dirhist_3='/Users/hktouw/github/airflow-sources/config'
+let g:netrw_dirhist_2='/Users/hktouw/Dropbox/notes/github/notes/2020'
+let g:netrw_dirhist_1='/Users/hktouw/Dropbox/notes/github/notes'
+let g:netrw_dirhist_0='/Users/hktouw/Dropbox/notes/github/notes/2020'
+let g:netrw_dirhist_9='/Users/hktouw/Dropbox/notes/github/notes'
+let g:netrw_dirhist_8='/Users/hktouw/Dropbox/notes/github/notes/2020'

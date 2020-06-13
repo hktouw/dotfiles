@@ -11,11 +11,11 @@ Plugin 'gmarik/Vundle.vim'
 
 " Define bundles via Github repos
 Plugin 'christoomey/vim-run-interactive'
-Plugin 'croaky/vim-colors-github'
+" Plugin 'croaky/vim-colors-github'
 Plugin 'kchmck/vim-coffee-script'
 " Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pbrisbin/vim-mkdir'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'slim-template/vim-slim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'

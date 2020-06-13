@@ -185,13 +185,18 @@ let g:ale_linters = {
 \   'go': ['golangci-lint']
 \ }
 "
-" let g:ale_fixers = {
-" \    'javascript': ['eslint'],
-" \    'typescript': ['prettier'],
-" \    'vue': ['eslint'],
-" \    'scss': ['prettier'],
-" \    'html': ['prettier']
-" \ }
+let g:ale_fixers = {
+\    'javascript': ['eslint'],
+\    'typescript': ['eslint', 'prettier'],
+\    'typescriptreact': ['eslint', 'tslint', 'prettier'],
+\    'vue': ['eslint'],
+\    'scss': ['prettier'],
+\    'html': ['prettier']
+\ }
+" let g:ale_set_highlights = 0
+" https://jonasjacek.github.io/colors/ #blue
+highlight ALEWarning ctermbg=18
+highlight ALEError ctermbg=18
 " let g:ale_fix_on_save = 1
 "
 " vim-go
@@ -247,6 +252,16 @@ autocmd FileType go nmap <Leader>i <Plug>(go-info)
 let g:go_guru_scope = ["..."]
 " Use gopls for rename
 let g:go_rename_command = 'gopls'
+
+" need to make vimproc
+" $ cd ~/.vim/bundle/vimproc && make
+
+" tsuquyomi and typscript-vim
+" gd // go to definition
+" C-^ // find all references
+autocmd FileType typescript nmap gd <Plug>(TsuquyomiDefinition)
+" let g:tsuquyomi_disable_quickfix = 1
+" let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 " function! IssueUpdate()
 "   execute '!/Users/hktouw/Dropbox/notes/github/go-playground/1573067691/issue-script' expand("%:t")

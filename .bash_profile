@@ -174,3 +174,4 @@ export PATH=$PATH:/usr/local/opt/mysql@5.7/bin
 
 nvm use --delete-prefix v11.14.0
 eval "$(pyenv init -)"
+eval "$(jenv init -)"
