@@ -66,7 +66,7 @@
    hi rubyConstant ctermfg=103 ctermbg=NONE cterm=NONE guifg=#9b859d   guibg=NONE gui=NONE
    hi rubyStringDelimiter ctermfg=113 ctermbg=NONE cterm=NONE guifg=#8f9d6a   guibg=NONE gui=NONE
    hi rubyBlockParameter ctermfg=103 ctermbg=NONE cterm=NONE guifg=#7587a6   guibg=NONE gui=NONE
-   hi rubyInstanceVariable ctermfg=19 ctermbg=NONE cterm=NONE guifg=#7587a6   guibg=NONE gui=NONE
+   hi rubyInstanceVariable ctermfg=39 ctermbg=NONE cterm=NONE guifg=#7587a6   guibg=NONE gui=NONE
    hi rubyInclude ctermfg=179 ctermbg=NONE cterm=NONE guifg=#cda869   guibg=NONE gui=NONE
    hi rubyGlobalVariable ctermfg=103 ctermbg=NONE cterm=NONE guifg=#7587a6   guibg=NONE gui=NONE
    hi rubyRegexp ctermfg=179 ctermbg=NONE cterm=NONE guifg=#e9c062 guibg=NONE   gui=NONE

@@ -71,6 +71,10 @@ print_colors () {
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 
+# Default
+# http://www.marinamele.com/2014/05/customize-colors-of-your-terminal-in-mac-os-x.html
+# export LSCOLORS=exfxcxdxbxegedabagacad
+export LSCOLORS=gxfxcxdxbxegedabagacad
 
 
 export PATH="$HOME/.rbenv/bin:$PATH"
