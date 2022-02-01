@@ -32,13 +32,16 @@ bind-key C-S-Tab previous-window
 bind-key -n C-S-U split-window -v
 bind-key -n C-S-I split-window -h
 
+#Resize pane
+bind-key u resize-pane -R 60
+bind-key y resize-pane -L 60
 
 # smart pane switching with awareness of vim splits
 bind -n C-h run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys C-h) || tmux select-pane -L"
 bind -n C-j run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys C-j) || tmux select-pane -D"
 # bind -n C-k run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys C-k) || tmux select-pane -U"
 bind -n C-l run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys C-l) || tmux select-pane -R"
-bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys 'C-\\') || tmux select-pane -l"
+#bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys 'C-\\') || tmux select-pane -l"
 
 # start window numbers at 1 to match keyboard order with tmux window order
 set -g base-index 1
@@ -84,3 +87,8 @@ set -g status-left "#S"
 # show session name, window & pane number, date and time on right side of status bar
 set -g status-right-length 60
 set -g status-right "#[fg=yellow]%b %d #[fg=green]%l:%M %p"
+
+# shift pane to left
+# leader + {
+# shift pane to right
+# leader + }

@@ -176,15 +176,20 @@ let vim_markdown_preview_github=1
 " tar -xzf v1.6.0.tar.gz
 " ln -s elixir-1.6.0 elixir
 " repeat for otp
-let g:alchemist#elixir_erlang_src = "/usr/local/share/src"
 
+
+" ALE
+" ALEFix
+let g:alchemist#elixir_erlang_src = "/usr/local/share/src"
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'typescript': ['tsserver', 'tslint'],
+\   'typescript': ['tsserver', 'eslint', 'tslint'],
 \   'vue': ['eslint'],
-\   'go': ['golangci-lint']
+\   'go': ['golangci-lint'],
+\   'c': ['clang', 'clangcheck', 'clangtidy', 'cppcheck', 'cpplint', 'g++']
 \ }
 "
+" autocmd BufWritePre *.ts ALEOrganizeImports
 let g:ale_fixers = {
 \    'javascript': ['eslint'],
 \    'typescript': ['eslint', 'prettier'],
@@ -259,9 +264,12 @@ let g:go_rename_command = 'gopls'
 " tsuquyomi and typscript-vim
 " gd // go to definition
 " C-^ // find all references
-autocmd FileType typescript nmap gd <Plug>(TsuquyomiDefinition)
+" TsuImport // add imports
+" TsuRenameSymbolC
+"
 " let g:tsuquyomi_disable_quickfix = 1
 " let g:syntastic_typescript_checkers = ['tsuquyomi']
+autocmd FileType typescript nmap gd <Plug>(TsuquyomiDefinition)
 
 " function! IssueUpdate()
 "   execute '!/Users/hktouw/Dropbox/notes/github/go-playground/1573067691/issue-script' expand("%:t")
@@ -269,3 +277,41 @@ autocmd FileType typescript nmap gd <Plug>(TsuquyomiDefinition)
 function! IssueCommentUpdate()
   execute '!/Users/hktouw/Dropbox/notes/github/go-playground/1589217078/issue-comment-script' expand("%:t")
 endfunction
+
+" highlight text and type // to search for next occurance
+" then type cgn to modify
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+
+" use 0 for legacy and 1 for new version
+let g:snipMate = { 'snippet_version' : 1 }
+
+
+
+
+" https://github.com/tpope/vim-abolish
+" crc - camel case
+" cr_ - snake case
+" cru - uppercase
+" cr- - dash case
+" cr. - dot case
+" cr<space> - space
+" crt - title case
+"
+
+
+" Move pane left
+" leader + {
+" Move pane right
+" leader + }
+" Change pane orienatation
+" leader + space
+"
+"
+"
+" ctl + ] jump to def or start language server?
+" gt jump to def
+" ctrl + t pop stack
+"
+"
+" https://github.com/dense-analysis/ale#2iv-go-to-definition
